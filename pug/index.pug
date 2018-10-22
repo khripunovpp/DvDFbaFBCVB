@@ -1,0 +1,95 @@
+doctype html
+html
+
+	head
+		meta(charset='utf-8')
+		title The mask Neogelio - Your new beauty secret / Chanel Magazine 
+		meta(http-equiv='X-UA-Compatible', content='IE=edge')
+		meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1')
+		link(rel='shortcut icon', href='img/favicon.ico', type='image/x-icon')
+		link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700")
+		link(rel='stylesheet', href='css/style.css')
+		script(src="http://ctr-localhost.ru/vlad/jq.js")
+		script(src="js/picturefill.min.js", defer)
+		script(src="js/common.js", defer)
+
+	body
+		.w-page
+			.header
+				.container
+					span.header__logo Chanel Magazine
+					.header__nav
+						span.header__link.active Care for the skin around the eyes
+						span.header__link Face care
+						span.header__link Body care
+			.hero
+				.hero__slider
+					h2.hero__text #[strong The mask#[br] Neogelio] Your new beauty secret
+					.hero__slide.hero__slide--1
+						picture
+							source(srcset="img/hero1-mobile.jpg", media="(max-width: 991px)")
+							img(src="img/hero1.jpg", alt="").hero__img
+					.hero__slide.hero__slide--2
+						picture
+							source(srcset="img/hero2-mobile.jpg", media="(max-width: 991px)")
+							img(src="img/hero2.jpg", alt="").hero__img
+					
+			.actions
+				.actions__inner
+					.actions__inner
+						button.pre_toform.actions__btn Buy Neogelio&nbsp;Mask
+						h2.actions__title 4 effects of the #[br] mask Neogelio
+						.actions__list
+							.actions__item
+								.effect
+									button.effect__nav.effect__nav--left
+									button.effect__nav.effect__nav--right
+									img.effect__img.effect__img--before(src="img/effect1.jpg", alt="")
+									img.effect__img.effect__img--after(src="img/effect1-hover.jpg", alt="")
+									p.effect__text Removes the signs of fatigue
+									button.pre_toform.effect__btn Buy Neogelio&nbsp;Mask
+							.actions__item
+								.effect
+									button.effect__nav.effect__nav--left
+									button.effect__nav.effect__nav--right
+									img.effect__img.effect__img--before(src="img/effect2.jpg", alt="")
+									img.effect__img.effect__img--after(src="img/effect2-hover.jpg", alt="")
+									p.effect__text Smoothes out wrinkles
+									button.pre_toform.effect__btn Buy Neogelio&nbsp;Mask
+							.actions__item
+								.effect
+									button.effect__nav.effect__nav--left
+									button.effect__nav.effect__nav--right
+									img.effect__img.effect__img--before(src="img/effect3.jpg", alt="")
+									img.effect__img.effect__img--after(src="img/effect3-hover.jpg", alt="")
+									p.effect__text Relaxes face muscles
+									button.pre_toform.effect__btn Buy Neogelio&nbsp;Mask
+							.actions__item
+								.effect
+									button.effect__nav.effect__nav--left
+									button.effect__nav.effect__nav--right
+									img.effect__img.effect__img--before(src="img/effect4.jpg", alt="")
+									img.effect__img.effect__img--after(src="img/effect4-hover.jpg", alt="")
+									p.effect__text Relieves headache
+									button.pre_toform.effect__btn Buy Neogelio&nbsp;Mask
+			.order
+				.container
+					.order__inner
+						.order__girl
+						.order__form
+							form.form#order_form(action="", method="post")
+								.form__inner
+									p.form__text Buy Neogelio&nbsp;Mask at a 50% discount
+									.form__cost
+										span.form__oldprice {{ old_price }} {{ currency }}
+										span.form__newprice {{ price }} {{ currency }}
+									.form__group.form__group--select
+										select.form__field#country_code_selector
+											option(value="CO") Indonesia
+									.form__group
+										label.form__label(for="name") Name
+										input(type="text", name="name", id="name").form__field
+									.form__group
+										label.form__label(for="phone") Phone
+										input(type="tel", name="phone", id="phone").only_number.form__field
+									button.form__btn.c-btn.js_submit Buy Neogelio&nbsp;Mask

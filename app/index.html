@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>The mask Neogelio - Your new beauty secret / Chanel Magazine </title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="http://ctr-localhost.ru/vlad/jq.js"></script>
+    <script src="js/picturefill.min.js" defer></script>
+    <script src="js/common.js" defer></script>
+  </head>
+  <body>
+    <div class="w-page">
+      <div class="header">
+        <div class="container"><span class="header__logo">Chanel Magazine</span>
+          <div class="header__nav"><span class="header__link active">Care for the skin around the eyes</span><span class="header__link">Face care</span><span class="header__link">Body care</span></div>
+        </div>
+      </div>
+      <div class="hero">
+        <div class="hero__slider">
+          <h2 class="hero__text"><strong>The mask<br> Neogelio</strong> Your new beauty secret</h2>
+          <div class="hero__slide hero__slide--1">
+            <picture>
+              <source srcset="img/hero1-mobile.jpg" media="(max-width: 991px)"><img class="hero__img" src="img/hero1.jpg" alt="">
+            </picture>
+          </div>
+          <div class="hero__slide hero__slide--2">
+            <picture>
+              <source srcset="img/hero2-mobile.jpg" media="(max-width: 991px)"><img class="hero__img" src="img/hero2.jpg" alt="">
+            </picture>
+          </div>
+        </div>
+      </div>
+      <div class="actions">
+        <div class="actions__inner">
+          <div class="actions__inner">
+            <button class="pre_toform actions__btn">Buy Neogelio&nbsp;Mask</button>
+            <h2 class="actions__title">4 effects of the <br> mask Neogelio</h2>
+            <div class="actions__list">
+              <div class="actions__item">
+                <div class="effect">
+                  <button class="effect__nav effect__nav--left"></button>
+                  <button class="effect__nav effect__nav--right"></button><img class="effect__img effect__img--before" src="img/effect1.jpg" alt=""><img class="effect__img effect__img--after" src="img/effect1-hover.jpg" alt="">
+                  <p class="effect__text">Removes the signs of fatigue</p>
+                  <button class="pre_toform effect__btn">Buy Neogelio&nbsp;Mask</button>
+                </div>
+              </div>
+              <div class="actions__item">
+                <div class="effect">
+                  <button class="effect__nav effect__nav--left"></button>
+                  <button class="effect__nav effect__nav--right"></button><img class="effect__img effect__img--before" src="img/effect2.jpg" alt=""><img class="effect__img effect__img--after" src="img/effect2-hover.jpg" alt="">
+                  <p class="effect__text">Smoothes out wrinkles</p>
+                  <button class="pre_toform effect__btn">Buy Neogelio&nbsp;Mask</button>
+                </div>
+              </div>
+              <div class="actions__item">
+                <div class="effect">
+                  <button class="effect__nav effect__nav--left"></button>
+                  <button class="effect__nav effect__nav--right"></button><img class="effect__img effect__img--before" src="img/effect3.jpg" alt=""><img class="effect__img effect__img--after" src="img/effect3-hover.jpg" alt="">
+                  <p class="effect__text">Relaxes face muscles</p>
+                  <button class="pre_toform effect__btn">Buy Neogelio&nbsp;Mask</button>
+                </div>
+              </div>
+              <div class="actions__item">
+                <div class="effect">
+                  <button class="effect__nav effect__nav--left"></button>
+                  <button class="effect__nav effect__nav--right"></button><img class="effect__img effect__img--before" src="img/effect4.jpg" alt=""><img class="effect__img effect__img--after" src="img/effect4-hover.jpg" alt="">
+                  <p class="effect__text">Relieves headache</p>
+                  <button class="pre_toform effect__btn">Buy Neogelio&nbsp;Mask</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="order">
+        <div class="container">
+          <div class="order__inner">
+            <div class="order__girl"></div>
+            <div class="order__form">
+              <form class="form" id="order_form" action="" method="post">
+                <div class="form__inner">
+                  <p class="form__text">Buy Neogelio&nbsp;Mask at a 50% discount</p>
+                  <div class="form__cost"><span class="form__oldprice">{{ old_price }} {{ currency }}</span><span class="form__newprice">{{ price }} {{ currency }}</span></div>
+                  <div class="form__group form__group--select">
+                    <select class="form__field" id="country_code_selector">
+                      <option value="CO">Indonesia</option>
+                    </select>
+                  </div>
+                  <div class="form__group">
+                    <label class="form__label" for="name">Name</label>
+                    <input class="form__field" type="text" name="name" id="name">
+                  </div>
+                  <div class="form__group">
+                    <label class="form__label" for="phone">Phone</label>
+                    <input class="only_number form__field" type="tel" name="phone" id="phone">
+                  </div>
+                  <button class="form__btn c-btn js_submit">Buy Neogelio&nbsp;Mask</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

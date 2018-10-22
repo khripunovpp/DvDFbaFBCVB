@@ -1,0 +1,138 @@
+@import "bourbon"
+
+@media only screen and (max-width : 991px)
+
+	.header
+		padding: 15px
+		&__nav
+			display: none
+		&__logo
+			font-size: 20px
+
+	.hero
+		&__text
+			padding: 0 20px
+			font-size: 14px
+			line-height: 1.5
+			transform: translate3d(0, 260px, 0) !important
+			strong
+				font-size: 30px
+				line-height: 30px
+			&.animated
+				animation-name: none
+		&__slider
+			height: 400px
+		&__img
+			margin-left: -496px
+		&__slide
+			&--1
+				.hero
+					&__img
+						animation-name: none
+						transform: translate3d(0, 0, 0) !important
+
+	.actions
+		padding: 50px 0
+		&__inner
+			max-width: 320px
+			padding: 0 15px
+		&__item
+			display: block
+			width: auto
+			margin: 0
+			&:nth-child(even)
+				margin-left: 0
+			&+&
+				margin-top: 30px
+		&__btn
+			display: block
+			margin-bottom: 45px
+		&__title
+			font-size: 22px
+
+	.effect
+		&__btn
+			display: none
+		&__text
+			font-size: 12px
+			top: 160px
+			padding: 5px 40px
+			text-transform: uppercase
+			&::before,
+			&::after
+				top: 12px
+				width: 30px
+		&__nav
+			display: block
+			position: absolute
+			z-index: 4
+			top: 50%
+			margin-top: -15px
+			width: 30px
+			height: 30px
+			border: none
+			background-color: #fff
+			padding: 0
+			&::after
+				content: ''
+				position: absolute
+				top: 0
+				left: 0
+				width: 30px
+				height: 30px
+				background-image: url(../img/arrow.png)
+				background-repeat: no-repeat
+				background-position: 50% 50%
+				background-size: 25px
+			&--left
+				left: -15px
+				transform: rotate(45deg) scale(-1,1)
+				&::after
+					transform: rotate(45deg)
+			&--right
+				right: -15px
+				transform: rotate(45deg) 
+				&::after
+					transform: rotate(-45deg)
+		&:hover
+			.effect
+				&__text
+					opacity: 1
+					background-color: rgba(#000, .2)
+
+
+	.order
+		background-image: url(../img/order-bg-mobile.jpg)
+		background-size: unset
+		background-position: center top 14px
+		overflow: hidden
+		padding-top: 14px
+		&__girl
+			background-image: url(../img/order-girl-mobile.png)
+			width: 381px
+			height: 348px
+			left: 50%
+			margin-left: -190px
+			bottom: auto
+			top: -14px
+		&__inner
+			max-width: 320px
+			margin: 0 auto
+			padding: 270px 0 0
+		&__form
+			width: auto
+
+	.form
+		padding: 25px 18px
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active)
+	.hero__text
+		transform: translate3d(0, 570px, 0)
+	.hero__slide--1 .hero__img
+		transform: translate3d(0, 0, 0)
+
+@supports (-ms-ime-align:auto)
+	.hero__text
+		transform: translate3d(0, 570px, 0)
+	.hero__slide--1 .hero__img
+		transform: translate3d(0, 0, 0)
