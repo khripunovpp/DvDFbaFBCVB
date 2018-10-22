@@ -1,13 +1,9 @@
 @import "bourbon"
-@import "icon.sass"
 @import "mixins"
 
 $font: 'Montserrat', sans-serif
 
 html
-	overflow: hidden
-	width: 100%
-	height: 100%
 	box-sizing: border-box
 
 *,
@@ -19,8 +15,6 @@ html
 body
 	margin: 0
 	overflow-x: hidden
-	width: 100%
-	height: 100%
 	font-family: $font
 	line-height: 1.4
 	font-size: 14px
@@ -110,8 +104,7 @@ select::-ms-expand
 		left: 0
 		width: 100%
 		transform: translate3d(0,330px,0)
-		&.animated
-			animation: heroText .7s cubic-bezier(0.215,0.61,0.355,1) both
+		animation: heroText .7s 1s cubic-bezier(0.215,0.61,0.355,1) both
 		strong
 			font-size: 44px
 			font-weight: 700
@@ -122,15 +115,6 @@ select::-ms-expand
 		overflow: hidden
 		position: relative
 		height: 800px
-		&.disable
-			.hero
-				&__text
-					transform: translate3d(0,570px,0)
-				&__slide
-					&--1
-						.hero
-							&__img
-								transform: translate3d(0,0,0)
 	&__slide
 		position: absolute
 		top: 0
@@ -139,12 +123,14 @@ select::-ms-expand
 		height: 100%
 		&--1
 			z-index: 1
-		&--2
-			z-index: 2
-		&.animated
 			.hero
 				&__img
-					animation: heroSlide .7s cubic-bezier(0.215,0.61,0.355,1) both
+					animation-delay: 1s
+		&--2
+			z-index: 2
+			.hero
+				&__img
+					animation-delay: 3s
 	&__img
 		position: absolute
 		top: 0
@@ -152,6 +138,7 @@ select::-ms-expand
 		margin-left: -961px
 		max-width: none
 		transform: translate3d(0,-100%,0)
+		animation: heroSlide .7s cubic-bezier(0.215,0.61,0.355,1) both
 
 
 @keyframes heroText
@@ -159,6 +146,12 @@ select::-ms-expand
 		transform: translate3d(0,330px,0)
 	to
 		transform: translate3d(0,570px,0)
+
+@keyframes heroTextMobile
+	from
+		transform: translate3d(0,150px,0)
+	to
+		transform: translate3d(0,260px,0)
 
 @keyframes heroSlide
 	from
@@ -318,8 +311,8 @@ select::-ms-expand
 		background-repeat: no-repeat
 		background-position: 50% 50%
 		background-size: cover
-		width: 919px
-		height: 859px
+		width: 862px
+		height: 806px
 
 .form
 	background-color: rgba(#fff, .7)
